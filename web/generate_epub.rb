@@ -10,6 +10,13 @@ require 'pp'
 require 'cgi'
 require 'digest/sha1'
 
+begin
+gem 'zip-zip'
+rescue LoadError
+  puts "Sorry! You need to 'gem install zip-zip' first!"
+  exit
+end
+
 begin 
   require 'eeepub'
 rescue LoadError
